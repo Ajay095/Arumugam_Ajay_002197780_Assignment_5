@@ -9,7 +9,7 @@ import Business.Restaurant.Dishes;
 import java.util.ArrayList;
 /**
  *
- * @author harold
+ * @author ajay09
  */
 public class DeliveryMan {
     private String name;
@@ -60,6 +60,14 @@ public class DeliveryMan {
     public void setOrderList(ArrayList<Order> order) {
         this.orderList = order;
     }
+    
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 
     public String getAddress() {
         return address;
@@ -69,13 +77,7 @@ public class DeliveryMan {
         this.address = address;
     }
 
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
+    
     @Override
     public String toString() {
         return userName;
