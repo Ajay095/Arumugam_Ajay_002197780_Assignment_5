@@ -34,8 +34,8 @@ public class DB4OUtil {
 
     private ObjectContainer createConnection() {
         try {
-
             EmbeddedConfiguration config = Db4oEmbedded.newConfiguration();
+            ObjectContainer db = Db4oEmbedded.openFile(config, FILENAME);
             config.common().add(new TransparentPersistenceSupport());
             //Controls the number of objects in memory
             config.common().activationDepth(Integer.MAX_VALUE);
@@ -44,15 +44,12 @@ public class DB4OUtil {
 
             //Register your top most Class here
             config.common().objectClass(EcoSystem.class).cascadeOnUpdate(true); // Change to the object you want to save
-
-            ObjectContainer db = Db4oEmbedded.openFile(config, FILENAME);
             return db;
         } catch (Exception ex) {
             System.out.print(ex.getMessage());
         }
         return null;
     }
-
     public synchronized void storeSystem(EcoSystem system) {
         ObjectContainer conn = createConnection();
         conn.store(system);
@@ -60,14 +57,13 @@ public class DB4OUtil {
         conn.close();
     }
     
-    public EcoSystem retrieveSystem(){
+    public EcoSystem retrieveSystem() {
         ObjectContainer conn = createConnection();
         ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class); // Change to the object you want to save
         EcoSystem system;
-        if (systems.size() == 0){
+        if (systems.isEmpty()) {
             system = ConfigureASystem.configure();  // If there's no System in the record, create a new one
-        }
-        else{
+        } else {
             system = systems.get(systems.size() - 1);
         }
         conn.close();
