@@ -15,15 +15,14 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ajay09
+ * @author MyPC1
  */
 public class EcoSystem extends Organization{
     
     private static EcoSystem business;
     private RestaurantDirectory restaurantDirectory;
     private CustomerDirectory customerDirectory;
-    private DeliveryManDirectory deliveryManDirectory;
-    
+
     public CustomerDirectory getCustomerDirectory() {
         if(customerDirectory == null)
         {
@@ -47,7 +46,7 @@ public class EcoSystem extends Organization{
     public void setDeliveryManDirectory(DeliveryManDirectory deliveryManDirectory) {
         this.deliveryManDirectory = deliveryManDirectory;
     }
-    
+    private DeliveryManDirectory deliveryManDirectory;
 
     public RestaurantDirectory getRestaurantDirectory() {
         if(restaurantDirectory == null)
@@ -60,7 +59,6 @@ public class EcoSystem extends Organization{
     public void setRestaurantDirectory(RestaurantDirectory restaurantDirectory) {
         this.restaurantDirectory = restaurantDirectory;
     }
-
 
     public EcoSystem(RestaurantDirectory restaurantDirectory, CustomerDirectory customerDirectory, DeliveryManDirectory deliveryManDirectory) {
 

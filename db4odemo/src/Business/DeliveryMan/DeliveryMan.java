@@ -4,25 +4,25 @@
  * and open the template in the editor.
  */
 package Business.DeliveryMan;
+
 import Business.Order.Order;
 import Business.Restaurant.Dishes;
 import java.util.ArrayList;
+
 /**
  *
- * @author ajay09
+ * @author kmv
  */
 public class DeliveryMan {
-    private String name;
-    private String userName;
-    private String address;
-    private String number;
+     private String Name;
+     private String UserName;
      private ArrayList<Order> orderList;
-     public void addOrder(String restaurentName, String customerName, String deliveryGuy, ArrayList<Dishes> Order, String cost, String deliveryAddress) {
+     public void addOrder(String restaurentName, String customerName, String deliverMan, ArrayList<Dishes> Order, String cost, String deliveryAddress) {
         Order order=new Order();
         //order.setOrder_id(String.valueOf(id));
         order.setCustomerName(customerName);
         order.setRestaurentName(restaurentName);
-        order.setDeliverMan(deliveryGuy);
+        order.setDeliverMan(deliverMan);
         order.setOrder(Order);
         order.setCost(cost);
         order.setDeliveryAddress(deliveryAddress);
@@ -32,25 +32,27 @@ public class DeliveryMan {
     }
 
     public String getUserName() {
-        return userName;
+        return UserName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
     }
     
+    private String address;
+    private String number;
 
-    public DeliveryMan(String userName){
-        this.userName=userName;
+    public DeliveryMan(String UserName){
+        this.UserName=UserName;
         orderList=new ArrayList<Order>();
     }
     
     public String getName() {
-        return name;
+        return Name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     public ArrayList<Order> getOrderList() {
@@ -59,14 +61,6 @@ public class DeliveryMan {
 
     public void setOrderList(ArrayList<Order> order) {
         this.orderList = order;
-    }
-    
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
     }
 
     public String getAddress() {
@@ -77,12 +71,16 @@ public class DeliveryMan {
         this.address = address;
     }
 
-    
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
     @Override
     public String toString() {
-        return userName;
+        return UserName;
     }
     
 }
-    
-

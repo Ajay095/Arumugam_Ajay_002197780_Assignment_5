@@ -10,16 +10,12 @@ import Business.WorkQueue.WorkQueue;
 
 /**
  *
- * @author ajay09
+ * @author raunak
  */
 public class UserAccount {
-    private String name;    
-    private String username;
-    private String password;
-    private Employee employee;
-    private Role role;
-    private WorkQueue workQueue;
     
+    private String name;
+
     public String getName() {
         return name;
     }
@@ -27,11 +23,17 @@ public class UserAccount {
     public void setName(String name) {
         this.name = name;
     }
-    
+    private String username;
+    private String password;
+    private Employee employee;
+    private Role role;
+    private WorkQueue workQueue;
+
     public UserAccount() {
         workQueue = new WorkQueue();
     }
-   
+    
+    
     
     public String getUsername() {
         return username;

@@ -7,9 +7,10 @@ package Business.Restaurant;
 
 import Business.Order.Order;
 import java.util.ArrayList;
+
 /**
  *
- * @author ajay09
+ * @author harold
  */
 public class Restaurant {
     private String adminUName;
@@ -27,12 +28,12 @@ public class Restaurant {
 
   
     
-     public void addOrder(String restaurentName, String customerName, String deliveryGuy, ArrayList<Dishes> Order, String cost, String deliveryAddress) {
+     public void addOrder(String restaurentName, String customerName, String deliverMan, ArrayList<Dishes> Order, String cost, String deliveryAddress) {
         Order order=new Order();
         order.setOrder_id(String.valueOf(id));
         order.setCustomerName(customerName);
         order.setRestaurentName(restaurentName);
-        order.setDeliveryGuy(deliveryGuy);
+        order.setDeliverMan(deliverMan);
         order.setOrder(Order);
         order.setCost(cost);
         order.setDeliveryAddress(deliveryAddress);

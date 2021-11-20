@@ -5,13 +5,15 @@
  */
 package Business.DeliveryMan;
 
+
 import java.util.ArrayList;
 
 /**
  *
- * @author ajay09
+ * @author harold
  */
 public class DeliveryManDirectory {
+    
     private ArrayList<DeliveryMan> deliveryManList;
    
     private DeliveryMan deliveryMan;
@@ -19,15 +21,7 @@ public class DeliveryManDirectory {
     public DeliveryManDirectory() {
         deliveryManList = new ArrayList<DeliveryMan>();
     }
-    
-      public DeliveryMan getDeliveryMan() {
-        return deliveryMan;
-    }
 
-    public void setDeliveryMan(DeliveryMan deliveryMan) {
-        this.deliveryMan = deliveryMan;
-    }
-    
     public ArrayList<DeliveryMan> getDeliveryManList() {
         return deliveryManList;
     }
@@ -35,6 +29,19 @@ public class DeliveryManDirectory {
     public void setDeliveryManList(ArrayList<DeliveryMan> deliveryManList) {
         this.deliveryManList = deliveryManList;
     }
+
+    public DeliveryMan getDeliveryMan() {
+        return deliveryMan;
+    }
+
+    public void setDeliveryMan(DeliveryMan deliveryMan) {
+        this.deliveryMan = deliveryMan;
+    }
+   
+    
+    
+    
+    
     
     
     public DeliveryMan createDeliveryMan(String uName){
@@ -49,6 +56,7 @@ public class DeliveryManDirectory {
                 deliveryManList.remove(i);
             }
         }
-    }  
+    }
+    
     
 }

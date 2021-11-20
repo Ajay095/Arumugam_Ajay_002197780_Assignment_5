@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package Business.Restaurant;
+
 import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
+
 /**
  *
  * @author harold
@@ -58,4 +60,5 @@ public class RestaurantDirectory {
         
     }
     
-}
+    
+ }

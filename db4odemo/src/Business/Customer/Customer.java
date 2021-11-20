@@ -11,19 +11,19 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ajay09
+ * @author harold
  */
 public class Customer {
     int id=101;
     private String Name;
-    private String UserName;
-    private ArrayList<Order> orderList;
-    public void addOrder(String restaurentName, String customerName, String deliveryGuy, ArrayList<Dishes> Order, String cost, String deliveryAddress) {
+     private String UserName;
+      private ArrayList<Order> orderList;
+     public void addOrder(String restaurentName, String customerName, String deliverMan, ArrayList<Dishes> Order, String cost, String deliveryAddress) {
         Order order=new Order();
         order.setOrder_id(String.valueOf(id));
         order.setCustomerName(customerName);
         order.setRestaurentName(restaurentName);
-        order.setDeliverMan(deliveryGuy);
+        order.setDeliverMan(deliverMan);
         order.setOrder(Order);
         order.setCost(cost);
         order.setDeliveryAddress(deliveryAddress);
@@ -80,4 +80,5 @@ public class Customer {
         this.number = number;
     }
 
+    
 }

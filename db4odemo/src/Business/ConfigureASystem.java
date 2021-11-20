@@ -9,7 +9,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author ajay09
+ * @author rrheg
  */
 public class ConfigureASystem {
     
@@ -26,7 +26,7 @@ public class ConfigureASystem {
         
         Employee employee = system.getEmployeeDirectory().createEmployee("RRH");
         
-        UserAccount ua = system.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", employee, new SystemAdminRole());
+        UserAccount ua = system.getUserAccountDirectory().createUserAccount("Admin","sysadmin", "sysadmin", employee, new SystemAdminRole());
         
         return system;
     }
