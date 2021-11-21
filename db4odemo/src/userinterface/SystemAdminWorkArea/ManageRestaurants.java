@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author chief_kmv
+ * @author ajay09
  */
 public class ManageRestaurants extends javax.swing.JPanel {
 
@@ -298,7 +298,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
                 
                 //UserAccount user = (UserAccount) networkJTable.getValueAt(selectedRow, 0);
                 system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getRestaurantDirectory().deleteRestaurent(user.getUsername());
+                system.getRestaurantDirectory().deleteRestaurant(user.getUsername());
                 populateNetworkTable();
             }
         }else{

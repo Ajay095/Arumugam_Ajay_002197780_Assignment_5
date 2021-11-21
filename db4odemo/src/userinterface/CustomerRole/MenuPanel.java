@@ -47,7 +47,7 @@ public class MenuPanel extends javax.swing.JPanel {
        
     }
      public void populateTable(){
-            DefaultTableModel model = (DefaultTableModel) menuTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) tblAddCart.getModel();
         
             model.setRowCount(0);
                 Object[] row = new Object[3];
@@ -60,7 +60,7 @@ public class MenuPanel extends javax.swing.JPanel {
     }
      
      public void populateCart(Dishes item){
-        DefaultTableModel model = (DefaultTableModel) cartTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblRemoveCart.getModel();
         model.setRowCount(0);
         
          items.add(item);
@@ -83,39 +83,39 @@ public class MenuPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cardBtn = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
+        btnAddCart = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         valueLabel = new javax.swing.JLabel();
         enterpriseLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        cartTable = new javax.swing.JTable();
+        tblRemoveCart = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
-        menuTable = new javax.swing.JTable();
-        orderBtn1 = new javax.swing.JButton();
-        RemoveBtn = new javax.swing.JButton();
-        addressTxt = new javax.swing.JTextField();
+        tblAddCart = new javax.swing.JTable();
+        btnOrder = new javax.swing.JButton();
+        btnRemoveCart = new javax.swing.JButton();
+        txtAddress = new javax.swing.JTextField();
         enterpriseLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cardBtn.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        cardBtn.setText("Add to Cart");
-        cardBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnAddCart.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        btnAddCart.setText("Add to Cart");
+        btnAddCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cardBtnActionPerformed(evt);
+                btnAddCartActionPerformed(evt);
             }
         });
-        add(cardBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, -1, -1));
+        add(btnAddCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, -1, -1));
 
-        backJButton.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        backJButton.setText("<<Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        btnBack.setText("<<Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, -1));
 
         valueLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         valueLabel.setText("<value>");
@@ -125,7 +125,7 @@ public class MenuPanel extends javax.swing.JPanel {
         enterpriseLabel.setText("Delivery Address");
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 500, 160, 30));
 
-        cartTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblRemoveCart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -151,11 +151,11 @@ public class MenuPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(cartTable);
+        jScrollPane1.setViewportView(tblRemoveCart);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, 100));
 
-        menuTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblAddCart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -181,51 +181,51 @@ public class MenuPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(menuTable);
+        jScrollPane2.setViewportView(tblAddCart);
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, -1, 100));
 
-        orderBtn1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        orderBtn1.setText("Order");
-        orderBtn1.addActionListener(new java.awt.event.ActionListener() {
+        btnOrder.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        btnOrder.setText("Order");
+        btnOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                orderBtn1ActionPerformed(evt);
+                btnOrderActionPerformed(evt);
             }
         });
-        add(orderBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 560, -1, -1));
+        add(btnOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 560, -1, -1));
 
-        RemoveBtn.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        RemoveBtn.setText("Remove From Cart");
-        RemoveBtn.addActionListener(new java.awt.event.ActionListener() {
+        btnRemoveCart.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        btnRemoveCart.setText("Remove From Cart");
+        btnRemoveCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RemoveBtnActionPerformed(evt);
+                btnRemoveCartActionPerformed(evt);
             }
         });
-        add(RemoveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 430, -1, -1));
-        add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 170, -1));
+        add(btnRemoveCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 430, -1, -1));
+        add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 170, -1));
 
         enterpriseLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel1.setText("Order Here:");
         add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 120, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cardBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cardBtnActionPerformed
+    private void btnAddCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCartActionPerformed
         
         
-        int selectedRow = menuTable.getSelectedRow();
+        int selectedRow = tblAddCart.getSelectedRow();
         if(selectedRow<0){
             JOptionPane.showMessageDialog(null,"Please select a row from the table to view details","Warning",JOptionPane.WARNING_MESSAGE);
         }
         else{
-            Dishes item=(Dishes)menuTable.getValueAt(selectedRow, 0);
+            Dishes item=(Dishes)tblAddCart.getValueAt(selectedRow, 0);
             
             populateCart(item);
           
         }
         
-    }//GEN-LAST:event_cardBtnActionPerformed
+    }//GEN-LAST:event_btnAddCartActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -235,11 +235,11 @@ public class MenuPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
         
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void orderBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderBtn1ActionPerformed
+    private void btnOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderActionPerformed
         // TODO add your handling code here:
-        String address=addressTxt.getText();
+        String address=txtAddress.getText();
         
         try {
              if(address==null || address.isEmpty()){
@@ -280,20 +280,20 @@ public class MenuPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
         
-    }//GEN-LAST:event_orderBtn1ActionPerformed
+    }//GEN-LAST:event_btnOrderActionPerformed
 
-    private void RemoveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveBtnActionPerformed
+    private void btnRemoveCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveCartActionPerformed
         // TODO add your handling code here:
-         int selectedRow = cartTable.getSelectedRow();
+         int selectedRow = tblRemoveCart.getSelectedRow();
         if(selectedRow<0){
             JOptionPane.showMessageDialog(null,"Please select a row from the table to view details","Warning",JOptionPane.WARNING_MESSAGE);
         }
         else{
-            Dishes item=(Dishes)cartTable.getValueAt(selectedRow, 0);
+            Dishes item=(Dishes)tblRemoveCart.getValueAt(selectedRow, 0);
             
             items.remove(item);
             sum=sum-Integer.parseInt(item.getPrice());
-            DefaultTableModel model = (DefaultTableModel) cartTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) tblRemoveCart.getModel();
         model.setRowCount(0);
             Object[] row = new Object[3];
                 for(Dishes dish:items){
@@ -306,20 +306,20 @@ public class MenuPanel extends javax.swing.JPanel {
           
         }
         
-    }//GEN-LAST:event_RemoveBtnActionPerformed
+    }//GEN-LAST:event_btnRemoveCartActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton RemoveBtn;
-    private javax.swing.JTextField addressTxt;
-    private javax.swing.JButton backJButton;
-    private javax.swing.JButton cardBtn;
-    private javax.swing.JTable cartTable;
+    private javax.swing.JButton btnAddCart;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnOrder;
+    private javax.swing.JButton btnRemoveCart;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel enterpriseLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable menuTable;
-    private javax.swing.JButton orderBtn1;
+    private javax.swing.JTable tblAddCart;
+    private javax.swing.JTable tblRemoveCart;
+    private javax.swing.JTextField txtAddress;
     private javax.swing.JLabel valueLabel;
     // End of variables declaration//GEN-END:variables
 }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author harold
+ * @author ajay09
  */
 public class RestaurantDirectory {
     private ArrayList<Restaurant> restaurantList;
@@ -35,7 +35,7 @@ public class RestaurantDirectory {
         return restaurant;
     }
     
-    public void deleteRestaurent(String username){
+    public void deleteRestaurant(String username){
         for(int i=0;i<restaurantList.size();i++){
             if(restaurantList.get(i).getAdminUName().equals(username)){
                 restaurantList.remove(i);

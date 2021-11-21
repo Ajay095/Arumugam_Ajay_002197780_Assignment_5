@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author chief_kmv
+ * @author ajay09
  */
 public class Order {
     private String order_id;
@@ -22,7 +22,7 @@ public class Order {
     public void setOrder_id(String order_id) {
         this.order_id = order_id;
     }
-    private String restaurentName;
+    private String restaurantName;
     private String customerName;
     private String deliverMan;
     private ArrayList<Dishes> Order;
@@ -43,11 +43,11 @@ public class Order {
     
 
     public String getRestaurentName() {
-        return restaurentName;
+        return restaurantName;
     }
 
-    public void setRestaurentName(String restaurentName) {
-        this.restaurentName = restaurentName;
+    public void setRestaurentName(String restaurantName) {
+        this.restaurantName = restaurantName;
     }
 
     public String getCustomerName() {

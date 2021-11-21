@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author harold
+ * @author ajay09
  */
 public class Restaurant {
     private String adminUName;
@@ -28,11 +28,11 @@ public class Restaurant {
 
   
     
-     public void addOrder(String restaurentName, String customerName, String deliverMan, ArrayList<Dishes> Order, String cost, String deliveryAddress) {
+     public void addOrder(String restaurantName, String customerName, String deliverMan, ArrayList<Dishes> Order, String cost, String deliveryAddress) {
         Order order=new Order();
         order.setOrder_id(String.valueOf(id));
         order.setCustomerName(customerName);
-        order.setRestaurentName(restaurentName);
+        order.setRestaurentName(restaurantName);
         order.setDeliverMan(deliverMan);
         order.setOrder(Order);
         order.setCost(cost);

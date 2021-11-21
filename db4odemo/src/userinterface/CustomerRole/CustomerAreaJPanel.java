@@ -20,7 +20,7 @@ import userinterface.RestaurantAdminRole.ManageMenu;
 
 /**
  *
- * @author raunak
+ * @author ajay09
  */
 public class CustomerAreaJPanel extends javax.swing.JPanel {
 
@@ -43,26 +43,20 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     }
     
     public void populateTable(){
-         DefaultTableModel model = (DefaultTableModel) restaurantsTable.getModel();
+         DefaultTableModel model = (DefaultTableModel) tblAvailRestaurants.getModel();
         
         model.setRowCount(0);
-         
        
-                Object[] row = new Object[3];
-                //System.out.println();
+                Object[] row = new Object[4];
+                
                 for(Restaurant restro:system.getRestaurantDirectory().getRestaurantList()){
                      row[0] = restro;
-                     //System.out.println(restro.getAdminUName());
+                     
                      row[1] = restro.getAddress();
                      row[2] = restro.getNumber();
                      model.addRow(row);
-                }
-            
-            
-        
-        
+                }   
     }
-
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -74,20 +68,20 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        restaurantsTable = new javax.swing.JTable();
-        requestTestJButton = new javax.swing.JButton();
-        refreshTestJButton = new javax.swing.JButton();
+        tblAvailRestaurants = new javax.swing.JTable();
+        btnOrderFood = new javax.swing.JButton();
+        btnRefresh = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
-        valueLabel1 = new javax.swing.JLabel();
-        valueLabel2 = new javax.swing.JLabel();
+        lblAvailRestaurants = new javax.swing.JLabel();
+        lblOrders = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        pastOrdersTbl = new javax.swing.JTable();
+        tblOrders = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 204, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        restaurantsTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblAvailRestaurants.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -113,34 +107,34 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(restaurantsTable);
-        if (restaurantsTable.getColumnModel().getColumnCount() > 0) {
-            restaurantsTable.getColumnModel().getColumn(0).setResizable(false);
-            restaurantsTable.getColumnModel().getColumn(1).setResizable(false);
-            restaurantsTable.getColumnModel().getColumn(2).setResizable(false);
+        jScrollPane1.setViewportView(tblAvailRestaurants);
+        if (tblAvailRestaurants.getColumnModel().getColumnCount() > 0) {
+            tblAvailRestaurants.getColumnModel().getColumn(0).setResizable(false);
+            tblAvailRestaurants.getColumnModel().getColumn(1).setResizable(false);
+            tblAvailRestaurants.getColumnModel().getColumn(2).setResizable(false);
         }
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 130, 410, 97));
 
-        requestTestJButton.setBackground(new java.awt.Color(255, 204, 102));
-        requestTestJButton.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        requestTestJButton.setText("Order Food");
-        requestTestJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnOrderFood.setBackground(new java.awt.Color(255, 204, 102));
+        btnOrderFood.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        btnOrderFood.setText("Order Food");
+        btnOrderFood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                requestTestJButtonActionPerformed(evt);
+                btnOrderFoodActionPerformed(evt);
             }
         });
-        add(requestTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, -1, -1));
+        add(btnOrderFood, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, -1, -1));
 
-        refreshTestJButton.setBackground(new java.awt.Color(255, 204, 102));
-        refreshTestJButton.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        refreshTestJButton.setText("Refresh");
-        refreshTestJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnRefresh.setBackground(new java.awt.Color(255, 204, 102));
+        btnRefresh.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        btnRefresh.setText("Refresh");
+        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshTestJButtonActionPerformed(evt);
+                btnRefreshActionPerformed(evt);
             }
         });
-        add(refreshTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, -1, -1));
+        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, -1, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Customer:");
@@ -150,15 +144,15 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         valueLabel.setText("<value>");
         add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 158, 26));
 
-        valueLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        valueLabel1.setText("Available Restaurants");
-        add(valueLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 250, 26));
+        lblAvailRestaurants.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblAvailRestaurants.setText("Available Restaurants");
+        add(lblAvailRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 250, 26));
 
-        valueLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        valueLabel2.setText("Your Orders");
-        add(valueLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 158, 26));
+        lblOrders.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblOrders.setText("Your Orders");
+        add(lblOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 158, 26));
 
-        pastOrdersTbl.setModel(new javax.swing.table.DefaultTableModel(
+        tblOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -184,19 +178,18 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(pastOrdersTbl);
+        jScrollPane2.setViewportView(tblOrders);
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, -1, 100));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
-        int selectedRow = restaurantsTable.getSelectedRow();
+    private void btnOrderFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderFoodActionPerformed
+        int selectedRow = tblAvailRestaurants.getSelectedRow();
         if(selectedRow<0){
             JOptionPane.showMessageDialog(null,"Please select a row from the table to view details","Warning",JOptionPane.WARNING_MESSAGE);
         }
         else{
-           Restaurant restaurant = (Restaurant)restaurantsTable.getValueAt(selectedRow, 0);
-            
+           Restaurant restaurant = (Restaurant)tblAvailRestaurants.getValueAt(selectedRow, 0);
             
               MenuPanel manageMenu=new MenuPanel(userProcessContainer,account,system,restaurant);
              userProcessContainer.add("Manage Restaurents",manageMenu);
@@ -205,32 +198,31 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         }
         
         
-    }//GEN-LAST:event_requestTestJButtonActionPerformed
+    }//GEN-LAST:event_btnOrderFoodActionPerformed
 
-    private void refreshTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButtonActionPerformed
+    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
 
         pastTblPopulate();
         
-    }//GEN-LAST:event_refreshTestJButtonActionPerformed
+    }//GEN-LAST:event_btnRefreshActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnOrderFood;
+    private javax.swing.JButton btnRefresh;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable pastOrdersTbl;
-    private javax.swing.JButton refreshTestJButton;
-    private javax.swing.JButton requestTestJButton;
-    private javax.swing.JTable restaurantsTable;
+    private javax.swing.JLabel lblAvailRestaurants;
+    private javax.swing.JLabel lblOrders;
+    private javax.swing.JTable tblAvailRestaurants;
+    private javax.swing.JTable tblOrders;
     private javax.swing.JLabel valueLabel;
-    private javax.swing.JLabel valueLabel1;
-    private javax.swing.JLabel valueLabel2;
     // End of variables declaration//GEN-END:variables
 
     private void pastTblPopulate() {
-        DefaultTableModel model = (DefaultTableModel) pastOrdersTbl.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblOrders.getModel();
         
         model.setRowCount(0);
-         
        
           for (Customer cust:system.getCustomerDirectory().getCustList()) {
            
@@ -240,7 +232,6 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 Object[] row = new Object[4];
                 row[0] = menu;
                 row[1] = menu.getRestaurentName();
-               
                 row[2] = menu.getCost();
                 row[3] = menu.getStatus();
                 model.addRow(row);
@@ -249,7 +240,6 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             }
             
         }
-        
         
     }
 }

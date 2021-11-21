@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author kmv
+ * @author ajay09
  */
 public class DeliveryMan {
      private String Name;

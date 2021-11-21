@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author chief_kmv
+ * @author ajay09
  */
 public class ManageDeliveryMan extends javax.swing.JPanel {
 
@@ -303,7 +303,6 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
              return;
         }
             
-  
         
         if (system.getUserAccountDirectory().checkIfUsernameIsUnique(uname)==false) {
             JOptionPane.showMessageDialog(null,"  User Name already exists ");
@@ -399,8 +398,6 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
              return;
         }
             
-  
-        
         
         if (system.getUserAccountDirectory().checkIfUsernameIsUnique(uname)==false) {
             JOptionPane.showMessageDialog(null,"  User Name already exists ");

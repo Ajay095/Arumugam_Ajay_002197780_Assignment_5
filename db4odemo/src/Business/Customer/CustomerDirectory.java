@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author harold
+ * @author ajay09
  */
 public class CustomerDirectory {
     private ArrayList<Customer> custList;
@@ -20,8 +20,6 @@ public class CustomerDirectory {
     public ArrayList<Customer> getCustList() {
         return custList;
     }
-    
-    
     
     public void setCustList(ArrayList<Customer> custList) {
         this.custList = custList;
