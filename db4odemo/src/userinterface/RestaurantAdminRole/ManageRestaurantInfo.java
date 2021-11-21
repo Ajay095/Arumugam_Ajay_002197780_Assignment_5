@@ -25,13 +25,13 @@ public class ManageRestaurantInfo extends javax.swing.JPanel {
      * Creates new form ManageInfo
      */
     EcoSystem system;
-    JPanel userWorkSpace;
+    JPanel userProcessContainer;
     UserAccount account;
     public ManageRestaurantInfo(JPanel userProcessContainer,UserAccount account, EcoSystem system) {
         initComponents();
         this.account=account;
         this.system=system;
-        this.userWorkSpace=userWorkSpace;
+        this.userProcessContainer=userProcessContainer;
         txtRName.setEnabled(false);
         txtAddress.setEnabled(false);
         txtPhNo.setEnabled(false);
@@ -236,9 +236,9 @@ public class ManageRestaurantInfo extends javax.swing.JPanel {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        userWorkSpace.remove(this);
-        CardLayout layout = (CardLayout) userWorkSpace.getLayout();
-        layout.previous(userWorkSpace);
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
 

@@ -26,13 +26,13 @@ public class AssignDeliveryMan extends javax.swing.JPanel {
      * Creates new form AssignDeliveryMan
      */
     
-    private JPanel userWorkSpace;
+    private JPanel userProcessContainer;
     EcoSystem system;
     private UserAccount account;
     Order order;
     
-    public AssignDeliveryMan(JPanel userWorkSpace, UserAccount account, Order order, EcoSystem system) {
-        this.userWorkSpace = userWorkSpace;
+    public AssignDeliveryMan(JPanel userProcessContainer, UserAccount account, Order order, EcoSystem system) {
+        this.userProcessContainer = userProcessContainer;
         this.account = account;
         this.order = order;
         this.system = system;
@@ -145,17 +145,17 @@ public class AssignDeliveryMan extends javax.swing.JPanel {
                 }
             }
         }
-        userWorkSpace.remove(this);
-        CardLayout layout = (CardLayout) userWorkSpace.getLayout();
-        layout.previous(userWorkSpace);
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
             
         }
     }//GEN-LAST:event_btnAssignOrderActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        userWorkSpace.remove(this);
-        CardLayout layout = (CardLayout) userWorkSpace.getLayout();
-        layout.previous(userWorkSpace);
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
 

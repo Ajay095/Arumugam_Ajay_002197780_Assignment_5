@@ -43,13 +43,13 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     }
     
     public void populateTable(){
-         DefaultTableModel model = (DefaultTableModel) tblAvailRestaurants.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblAvailRestaurants.getModel();
         
         model.setRowCount(0);
        
-                Object[] row = new Object[4];
+                Object[] row = new Object[3];
                 
-                for(Restaurant restro:system.getRestaurantDirectory().getRestaurantList()){
+                for(Restaurant restro :system.getRestaurantDirectory().getRestaurantList()){
                      row[0] = restro;
                      
                      row[1] = restro.getAddress();

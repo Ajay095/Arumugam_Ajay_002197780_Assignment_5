@@ -43,7 +43,7 @@ public class RestaurantDirectory {
         }
     }
     
-    public void updateRestaurantInfo(Restaurant restro,String name,String number,String address){
+    public void updateRestaurantInfo(Restaurant restro,String name,String address,String number){
         restro.setName(name);
         restro.setAddress(address);
         restro.setNumber(number);

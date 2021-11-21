@@ -246,7 +246,7 @@ public class MenuPanel extends javax.swing.JPanel {
                 throw new NullPointerException("Address field is Empty");
                 
                 
-            }else if(address.length()<5){
+            }else if(address.length()<4){
                 throw new Exception("Please enter valid address ");
                 
             }
@@ -294,7 +294,7 @@ public class MenuPanel extends javax.swing.JPanel {
             items.remove(item);
             sum=sum-Integer.parseInt(item.getPrice());
             DefaultTableModel model = (DefaultTableModel) tblRemoveCart.getModel();
-        model.setRowCount(0);
+            model.setRowCount(0);
             Object[] row = new Object[3];
                 for(Dishes dish:items){
                      row[0] = dish;
